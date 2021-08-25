@@ -1,0 +1,172 @@
+@media (min-width: 760px)
+    .wrapper
+        max-height: 47vh
+
+    .header 
+        max-height: 52.5vh
+        align-items: center
+        overflow: hidden
+        @include displayFlexRow
+
+        &__textSection 
+            max-width: 50%
+    
+        &__imageSection 
+            width: 50%
+            display: block
+
+        &__cloud 
+            width: 50vh
+            right: 0
+            bottom: -50px
+
+    .aboutUs
+        
+        &__row
+            @include displayFlexColumn
+            padding: 0px 0px
+            margin-top: 0px
+
+        &__textArticle
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+        &__box
+            width: 45%
+            text-align: justify
+
+    .room
+        
+        &__row
+            @include displayFlexColumn
+            padding: 0px 0px
+            margin-top: 0px
+
+        &__textArticle
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+        &__box
+            width: 45%
+            text-align: justify
+
+    .services
+
+        &__articleImage
+            width: 100%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+        &__image
+            width: 48%
+
+        &__articleImage
+
+            &--order
+                order: 1
+
+        &__articleText
+
+            &--order
+                order: 2
+                padding-right: 0px !important
+                padding-left: 50px
+
+    .galleryMobile
+        @include displayFlexRow
+        flex-wrap: wrap
+        justify-content: space-between
+
+        &__box
+            width: 49%
+            height: 250px
+            margin-top: 15px
+
+        &__image
+            width: 100%
+            height: 250px
+            margin-top: 15px
+            border-radius: 5px
+    
+    .contact
+        padding: 100px 15px
+    
+        &__imageLeft
+            width: 70%
+
+        &__imageRight
+            width: 70%
+            opacity: 0.4
+
+    .footer
+
+        &__wrapper
+            display: flex
+            padding: 50px 0px
+    
+        &__box
+            width: 100vw
+            display: flex
+            flex-direction: column
+            padding: 20px 0px
+
+    .firstSectionSubPage 
+    
+        &__wrapper
+            display: flex
+            flex-direction: column
+            padding: 100px 0px
+
+        &__text,
+        &__textSecond
+            width: 100%
+            padding: 0px 15px
+
+        &__articleImage,
+        &__articleImageSecond
+            display: none
+
+    .priceList
+        width: 100vw
+
+        &__infoBox
+            text-align: center
+            margin: 0px 0px 50px
+
+        &__wrapper
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-top: 20px
+            padding: 0px 15px
+            display: none
+
+        &__active
+            display: flex
+
+        &__box
+            display: flex
+            justify-content: space-between
+            padding: 5px 10px
+            border-bottom: 2px dotted $green
+            // box-shadow: -1px 9px 18px 0px rgba(75, 81, 91, 0.2)
+            margin-bottom: 30px
+            width: 45%
+        
+    .offer
+
+        &__slideBox
+            width: 45%
+            min-width: 45%
+            margin-right: 2.5%
+            margin-left: 2.5%
+
+        &__headingTwo
+            padding-left: 0px
+            padding-bottom: 0px

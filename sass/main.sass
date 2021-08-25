@@ -1,0 +1,500 @@
+@import "./topography";
+@import "./mixins";
+@import "./_keyframes"
+
+.wrapper 
+    position: relative
+    width: 100vw
+    height: 100vh
+    background-image: url("/image/headerBackgroundMobile.png")
+    background-size: cover
+    background-position: center
+
+.header 
+    width: 100vw
+    height: 100vh
+    @include displayFlexColumn
+
+    &__cloud 
+        position: absolute
+        bottom: 0
+        width: 100vw
+        transform: rotate(-90deg)
+
+    &__imageSection
+        display: none
+
+.navigation
+    display: none
+
+.topIconBox
+    display: none
+
+.cursor
+    position: fixed
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    transform: translate(-50%, -50%)
+    // pointer-events: none
+    // mix-blend-mode: difference
+    transition: 0.5
+    z-index: 1000
+    display: none
+
+.aboutUs
+    width: 100vw
+    
+    &__wrapper
+        width: 100%
+        @include displayFlexColumn
+
+    &__textArticle
+        margin: 20px 0px
+
+    &__box
+        margin: 20px 0px
+
+    &__number
+        font-size: 5rem
+        font-weight: bold
+        color: rgba(0, 0, 0, 0.1)
+
+    &__imageArticle
+        width: 100%
+
+    &__image
+        width: 100%
+        border-radius: 5px
+
+    &__leafOne,
+    &__leafTwo
+        display: none
+
+.roomPrice
+    width: 100vw
+
+    &__wrapper
+        width: 100%
+        @include displayFlexColumn
+
+    &__article
+        width: 100%
+
+    &__row
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+    &__label
+        margin-top: 40px
+        
+
+.room
+    width: 100vw
+    
+    &__wrapper
+        width: 100%
+        @include displayFlexColumn
+
+    &__textArticle
+        margin: 20px 0px
+
+    &__box
+        margin: 20px 0px
+
+    &__number
+        font-size: 5rem
+        font-weight: bold
+        color: rgba(0, 0, 0, 0.1)
+
+    &__imageArticle
+        width: 100%
+
+    &__image
+        width: 100%
+        border-radius: 5px
+
+    &__leafOne,
+    &__leafTwo
+        display: none
+
+.services
+    width: 100vw
+    
+    &__wrapper
+        width: 100%
+        @include displayFlexColumn
+
+    &__headingTwo
+        margin-bottom: 20px
+
+    &__articleImage
+        width: 100%
+
+        &--order
+            order: 2
+
+    &__articleText
+
+        &--order
+            order: 1
+
+    &__image
+        width: 100%
+        max-height: 500px
+        border-radius: 5px
+        margin-top: 20px
+
+    &__article
+        @include displayFlexColumn
+        padding: 0px
+
+.opinions
+    position: relative
+    max-width: 95vw
+    margin: 0 auto
+
+    &__box
+        @include displayFlexColumn
+        align-items: center
+        margin-top: 0px
+
+    &__paragraphName
+        font-weight: 500
+        margin: 10px 0px 
+
+    &__paragraph
+        padding: 0px 20px
+
+    &__quoteIcon
+        max-width: 100px
+        max-height: 100px  
+        position: absolute 
+        z-index: -1 
+        opacity: 0.2 
+        left: 40px 
+        top: 70px
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after 
+    color: $green
+    position: absolute
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after
+    color: $green
+
+.swiper-pagination-bullet-active
+    background: $green !important
+
+.galleryMobile
+    @include displayFlexColumn
+
+    &__box
+        width: 100%
+
+    &__image
+        width: 100%
+        margin-top: 15px
+        border-radius: 5px
+
+.gallery__headingTwo 
+    display: none
+    text-align: center
+    margin-top: 50px
+
+.contact
+    width: 100vw
+    padding: 0 15px 20px
+    position: relative
+    margin-top: 50px
+    overflow: hidden
+    
+    &__text
+        text-align: center
+        max-width: 700px
+        text-align: center
+        margin: 0 auto
+
+    &__imageLeft
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 110%
+        opacity: 0.4
+
+    &__imageRight
+        position: absolute
+        right: 0
+        bottom: 0
+        width: 110%
+        opacity: 0
+
+    &__paragraph
+        font-size: 2.5rem
+        margin-bottom: 10px
+        font-weight: 600
+
+    &__link
+        color: $black
+        text-decoration: none
+        transition: color 0.3s
+
+.footer
+    width: 100vw
+    background-color: #f9f9fa
+    padding: 0 15px
+
+    &__wrapper
+        max-width: 1250px
+        margin: 0 auto
+    
+    &__box
+        width: 100vw
+        display: flex
+        flex-direction: column
+        padding: 20px 0px
+
+    &__link
+        text-decoration: none
+        color: $black
+        font-weight: 500
+
+.firstSectionSubPage 
+    width: 100vw
+    display: flex
+    flex-direction: column
+
+    &__wrapper
+        display: flex
+        flex-direction: column
+        width: 100%
+        padding: 50px 0px
+
+    &__articleImage,
+    &__articleImageSecond
+        display: flex
+        width: 100%
+        oreder: 1
+
+    &__image
+        width: 100%
+        border-radius: 5px
+
+    &__text,
+    &__textSecond
+        display: flex
+        flex-direction: column
+        width: 100%
+        padding: 0px 15px 50px
+        order: 0
+
+    &__unorderList
+        list-style: none
+        text-align: justify
+
+    &__listElement
+        margin-top: 10px
+        display: flex
+        flex-direction: row
+
+    &__icon
+        margin-top: 7px
+        margin-right: 10px
+        color: $green
+
+    &__headingTwo
+        text-align: center
+        margin-bottom: 10px
+
+    &__backgroundLeaf
+        display: none
+
+.priceList
+    width: 100vw
+    padding: 50px 0px 0px
+    position: relative
+
+    &__chooseMenu
+        width: 100%
+        padding: 0 15px
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__menu
+        position: relative
+        margin-top: 10px
+
+    &__wrapper
+        display: flex
+        flex-direction: column
+        margin-top: 20px
+        padding: 0px 15px
+        display: none
+
+    &__span
+        width: 28%
+        font-weight: bold
+        text-align: center
+
+    &__active
+        display: flex
+
+    &__infoBox
+        text-align: center
+        margin: 0px 0px 50px
+        padding: 0px 15px
+
+    &__box
+        display: flex
+        justify-content: space-between
+        padding: 5px 10px
+        border-bottom: 2px dotted $green
+        // box-shadow: -1px 9px 18px 0px rgba(75, 81, 91, 0.2)
+        margin-bottom: 30px
+
+.rodo
+    width: 100vw
+    height: 100%
+    margin: 50px 0px
+
+    &__wrapper
+        width: 100%
+        padding: 0 25px
+        text-align: justify
+
+    &__link
+        color: $black
+        text-decoration: none
+        font-weight: bold
+        transition: color 0.5s
+
+.offer
+    width: 100vw
+    height: 100%
+    margin: 50px 0px
+
+    &__wrapper
+        width: 100%
+
+    &__firstArticle
+        margin-top: 30px
+
+    &__slider
+        display: flex
+        padding: 0rem 20px 50px
+        overflow-x: auto
+        scroll-behavior: smooth
+        scroll-snap-type: mandatory
+        scroll-snap-points-x: repeat(300px)
+        -webkit-overflow-scrolling: touch
+
+    &__slideBox
+        width: 85%
+        min-width: 85%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-content: center
+        align-items: center
+        flex-shrink: 0
+        text-align: center
+        border-radius: 10px
+        padding: 5rem 2rem 2rem 2rem
+        margin-right: 2%
+        margin-left: 2%
+        box-shadow: -1px 9px 18px 0px rgba(75, 81, 91, 0.1)
+        z-index: 100
+        background: $white
+
+    &__iconBox
+        position: relative
+        margin: 1rem 0rem
+
+    &__icon
+        position: relative
+        z-index: 100
+        fill: #bb2929
+  
+    &__span
+        padding: 0.5rem 2rem
+        border-radius: 50px
+        background-color: rgba(37, 194, 79, 0.3)
+
+    &__patternsPlus
+        display: none
+
+    &__decorationPlus
+        display: none
+
+    &__headingTwo
+        padding-left: 20px
+        padding-bottom: 40px
+
+    &__largeCircle
+        position: absolute
+        top: -40%
+        left: -50%
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        background-color: rgba(37, 194, 79, 0.1)
+        z-index: 1
+
+        &--web
+            top: -40%
+            left: -50%
+            animation: offerLargeCircleWeb 1.5s linear alternate infinite
+
+        &--mobile
+            top: -40%
+            left: -50%
+            animation: offerLargeCircleMobile 2.5s linear alternate infinite
+
+        &--design
+            top: 0%
+            left: 20%
+            animation: offerLargeCircleDesign 1.5s linear alternate infinite
+
+        &--code
+            top: -20%
+            left: 20%
+            animation: offerLargeCircleCode 1.5s linear alternate infinite
+
+    &__smallCircle
+        position: absolute
+        top: 70%
+        left: 80%
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        background-color: #f3f1f1
+        z-index: 1
+
+        &--web
+            top: 70%
+            left: 80%
+            animation: offerSmallCircleWeb 1.5s linear alternate infinite
+
+        &--mobile
+            top: -50%
+            animation: offerSmallCircleMobile 2.5s linear alternate infinite
+
+        &--design
+            top: -40%
+            left: -30%
+            animation: offerSmallCircleDesign 1.5s linear alternate infinite
+
+        &--code
+            top: 80%
+            left: -30% 
+            animation: offerSmallCircleCode 1.5s linear alternate infinite
+
+    &__paragraphMain
+        margin-bottom: 10px
+        font-weight: 600
+    
+@import "./_medium"
+@import "./_large"

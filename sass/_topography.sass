@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+
+*, 
+::after, 
+::before 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+$black: #000000
+$green: #25c24f
+$greenHover: #198636
+$white: #FFFFFF
+
+html 
+    font-size: 62.5%
+    font-family: 'Quicksand', sans-serif
+    // font-family: 'MonteCarlo', cursive;
+    scroll-behavior: smooth
+    overflow-x: hidden
+
+
+
+.mobileNavigation 
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-color: $white
+    background-size: cover
+    background-position: center
+    z-index: 0
+    position: fixed
+    top: 0
+    transition: 0.8s
+    opacity: 0
+
+    &__title 
+        font-family: 'MonteCarlo', cursive
+        font-size: 3.6rem
+        font-weight: 600
+        text-align: center
+        margin-top: 30px
+  
+    &__list 
+        text-align: center
+        list-style: none
+    
+    &__element 
+        font-size: 2rem
+        margin: 20px 0px
+        font-weight: 500
+
+.activeNavigation
+  opacity: 1
+  z-index: 50
+
+.mobileButtonNavigation 
+    position: fixed 
+    top: 20px
+    left: calc(100vw - 50px)
+    width: 40px
+    height: 15px
+    z-index: 500
+    cursor: pointer
+    
+    &__inner 
+        position: relative
+        width: 100%
+        height: 100%
+
+    &__bars 
+        position: absolute
+        right: 0
+        width: 70%
+        height: 2px
+        background-color: $black
+        will-change: transform
+        transition: 0.3s all ease
+      
+        &--1
+          top: 0
+          width: 60%
+        
+
+        &--2,
+        &--3
+          top: 0
+          bottom: 0
+          margin: auto
+        
+
+        &--4
+          bottom: -1px
+          width: 50%
+
+.mobileButtonNavigationSticky
+  top: 40px
+
+.active 
+    .mobileButtonNavigation__bars--1,
+    .mobileButtonNavigation__bars--4
+      transform: scaleX(0)
+    
+    .mobileButtonNavigation__bars--2
+      transform: rotate(45deg)
+
+    .mobileButtonNavigation__bars--3
+      transform: rotate(-45deg)
+
+    .mobileButtonNavigation__bars--1,
+    .mobileButtonNavigation__bars--4
+      transform: scaleX(0)
+
+.headingOne 
+  font-size: 3.2rem
+  margin-bottom: 15px
+
+.headingTwo
+  font-size: 2.5rem
+
+.headingThree
+  font-size: 2rem
+  margin: 0px 0px 10px
+
+.paragraph 
+  font-size: 1.5rem
+  line-height: 25px
+
+.spanGreenColor 
+  color: $green
+
+.button
+  position: relative
+  display: inline-block
+  font-size: 1.6rem
+  letter-spacing: 2px
+  text-decoration: none
+  color: black
+  padding: 1rem 3rem
+  margin-top: 3rem
+  transition: 0.5s
+  border: none
+  background: none
+  cursor: pointer
+  font-weight: 600
+  z-index: 1
+
+  &:hover
+    background-color: $green
+    transition-delay: 0.4s
+    color: $white
+
+  &:hover::after
+    width: 100%
+    height: 100%
+
+  &:hover::before
+    width: 100%
+    height: 100%
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 15px
+    height: 15px
+    border-top: 2px solid $green
+    border-left: 2px solid $green
+    transition: 0.5s
+
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 15px
+    height: 15px
+    border-bottom: 2px solid $green
+    border-right: 2px solid $green
+    transition: 0.5s
+
+
+@media (min-width: 992px)
+  .headingOne 
+    font-size: 4.2rem
+
+  .headingTwo
+    font-size: 3.5rem
+
+  .headingThree
+    font-size: 2.2rem
+
+  .paragraph 
+    font-size: 1.6rem
+    line-height: 25px
+
+  .button 
+    font-size: 1.6rem
